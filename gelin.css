@@ -1,0 +1,920 @@
+.gl_bage {
+	padding: 20px 0;
+	width: 100%;
+	height: 320px;
+	top: calc(50% - 160px);
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.gl_bage>div {
+	position: relative;
+	width: 225px;
+	height: 300px;
+	margin-left: 10px;
+	border: #BD6B18 5px;
+	background-color: #aa0000;
+	background-size: cover;
+}
+
+.gl_bage>div:hover {
+	transform: scale(1.1, 1.1);
+	z-index: 1;
+}
+
+.gl_bage>div::before {
+	content: '';
+	position: relative;
+	background-image: url(biankuang.png);
+	display: inline-block;
+	width: calc(100% + 10px);
+	top: -5px;
+	left: -5px;
+	height: calc(100% + 10px);
+	background-size: 100% 100%;
+}
+
+.gl_bage>div>.gl_title {
+	display: inline-block;
+	position: absolute;
+	width: calc(100% + 10px);
+	line-height: 45px;
+	text-align: center;
+	font-family: 'xinwei';
+	height: 60px;
+	bottom: -10px;
+	left: -5px;
+	background-image: url(page/button.png);
+	background-size: 100% 100%;
+	font-size: 25px;
+}
+
+.gl_book {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #000000;
+	z-index: 10;
+}
+
+.gl_book * {
+	box-sizing: border-box;
+	text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0);
+}
+
+.gl_book div {
+	background-size: cover;
+}
+
+.gl_switchMode {
+	top: calc(50% - 200px);
+	width: 100%;
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.gl_switchMode>div {
+	margin-left: 5px;
+	position: unset;
+	font-size: 30px;
+	text-align: center;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	font-family: 'xinwei';
+	background-image: url(page/switch.png);
+	background-size: 100% 100%;
+}
+
+.gl_switchMode>.select {
+	background-image: url(page/switch2.png);
+	color: #c80000;
+}
+
+.gl_scedi {
+	z-index: 10 !important;
+}
+
+.gl_info {
+	color: #0000FF;
+}
+
+.judges>.gl_hideJudge {
+	display: none;
+}
+
+.player>.gl_jingshi {
+	width: 25px;
+	height: 25px;
+	top: -10px;
+	left: -10px;
+	border-radius: 100% !important;
+	text-align: center;
+}
+
+.player>.gl_jingshi::before {
+	content: '';
+	position: relative;
+	background-image: url(image/jingshi_border.png);
+	display: inline-block;
+	width: calc(100% + 6px);
+	height: calc(100% + 6px);
+	top: -3px;
+	left: -3px;
+	z-index: 1;
+	background-size: 100% 100%;
+}
+
+.player>.gl_jingshi>.skillbarshadow {
+	width: 100%;
+	height: 100%;
+	border-radius: 100% !important;
+	background-image: url(image/jingshi.png);
+	background-size: 100% 100%;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+}
+
+.player>.gl_jingshi .skillbarfill {
+	background-color: #aaaaaa;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+}
+
+.player>.gl_jingshi .firetext {
+	color: #ffaa00;
+	font-size: 23px;
+	font-family: 'huangcao';
+	text-shadow: 0 0 5px rgb(255, 100, 100), 0 0 10px rgb(255, 50, 50), 0 0 15px rgb(255, 50, 50);
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
+.player>.speed {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: auto;
+	bottom: 15px;
+	width: 100%;
+	z-index: 88;
+}
+
+.player>.speed div,
+#arena .speed>div {
+	position: absolute;
+	top: auto !important;
+	height: 5px;
+}
+
+.player>.speed>div:first-child {
+	width: 80px;
+	right: auto;
+	left: calc(50% - 50px);
+	box-shadow: 0 0 4px yellow;
+	background: rgb(100, 0, 0);
+}
+
+.player>.speed>div:first-child>div {
+	width: 0;
+	left: 0;
+	background: linear-gradient(#FFDA47, #CE0404);
+	transition-timing-function: linear;
+}
+
+.gl_leina {
+	position: absolute;
+	width: calc(50% - 200px);
+	top: calc(50% - 200px);
+}
+
+.gl_duihua {
+	background-image: url(image/duihua.png);
+	width: 400px;
+	height: 140px;
+	font-size: 20px;
+	padding: 25px;
+	overflow: auto;
+	background-size: 100% 100%;
+	left: calc(50% - 200px);
+	top: calc(50% - 150px);
+	animation: 0.2s gl_tanchu linear;
+
+}
+
+@keyframes gl_tanchu {
+	from {
+		transform: scaleY(0);
+	}
+
+	to {
+		transform: scaleY(1);
+	}
+}
+
+.gl_switch {
+	width: 350px;
+	height: 30px;
+	left: calc(50% - 145px);
+	top: calc(50% + 40px);
+	text-align: center;
+}
+
+.gl_switch>div {
+	background-image: url(page/switch.png);
+	width: 45%;
+	font-size: 20px;
+	padding: 5px;
+	background-size: 100% 100%;
+	position: unset;
+	height: 100%;
+}
+
+.gl_switch>div:active {
+	background-image: url(page/switch2.png);
+}
+
+.gl_cg {
+	background-size: cover;
+	background-position: 50% 0;
+	width: 100%;
+	height: 100%;
+	transition: all 3s;
+	background-color: #000000;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 101;
+}
+
+.kp_coin {
+	position: relative;
+	top: 200px;
+	left: calc(50% - 100px);
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+}
+
+.kp_coin_true {
+	animation: 2s kp_coin_true forwards;
+}
+
+@keyframes kp_coin_true {
+	from {
+		transform: rotateX(0);
+	}
+
+	to {
+		transform: rotateX(3600deg);
+	}
+}
+
+.kp_coin_false {
+	animation: 2s kp_coin_false forwards;
+}
+
+@keyframes kp_coin_false {
+	from {
+		transform: rotateX(0);
+	}
+
+	to {
+		transform: rotateX(3780deg);
+	}
+}
+
+.kp_coin>div {
+	position: absolute;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	background-color: #fede67;
+	border: #ffff00 20px solid;
+	border-radius: 100%;
+	font-family: 'xinwei';
+	font-size: 70px;
+	color: #fd8f0f;
+}
+
+
+.gl_yindao {
+	position: absolute;
+	left: 4%;
+	top: 5%;
+	background-image: url(page/yindao.png);
+	background-size: 100% 100%;
+	transition: all 0.5s;
+	z-index: 10;
+}
+
+.gl_yindao>div {
+	position: absolute;
+	background-size: cover;
+	transition: all 0.5s;
+	left: 24%;
+	top: 46%;
+	background-color: #aaaaff;
+}
+
+.gl_yindao:not(.gl_samll)>div {
+	width: 120px;
+	border-radius: 120px;
+	height: 120px;
+}
+
+.gl_samll>div {
+	width: 90px;
+	border-radius: 90px;
+	height: 90px;
+}
+
+.gl_yindao:not(.gl_samll) {
+	width: 229px;
+	height: 400px;
+}
+
+.gl_samll {
+	transform: translateY(-80px);
+	width: 172px;
+	height: 300px;
+}
+
+.gl_shu {
+	width: 100%;
+	height: 100%;
+	position: unset;
+	background-image: url(page/book2.png);
+	background-size: 100% 100% !important;
+}
+
+.gl_page {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transition: all 1s;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.gl_page>.gl_page1 {
+	background-image: url(page/page1.png);
+	background-size: 100% 100%;
+	position: absolute;
+	text-align: center;
+	padding: 10px;
+	width: 92%;
+	height: 91%;
+	top: 4%;
+	backface-visibility: hidden;
+	z-index: 1;
+	overflow-y: auto;
+}
+
+.gl_page>.gl_page2 {
+	position: absolute;
+	left: 0;
+	overflow-y: auto;
+	padding: 10px;
+	text-align: center;
+	transform: scaleX(-1);
+	background-image: url(page/page2.png);
+	top: 4%;
+	background-size: 100% 100%;
+	width: 92%;
+	height: 91%;
+}
+
+.gl_lastBtn,
+.gl_nextBtn {
+	position: absolute;
+	top: 200px;
+	cursor: pointer;
+	z-index: 999;
+	font-size: 50px;
+	line-height: 100px;
+	color: #fff;
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.gl_lastBtn {
+	left: 0;
+}
+
+.gl_nextBtn {
+	right: 0;
+}
+
+.gl_xvanzhuan {
+	animation: 0.5s xvanzhuan infinite linear;
+}
+
+@keyframes xvanzhuan {
+	from {
+		transform: rotateZ(0deg);
+	}
+
+	to {
+		transform: rotateZ(1800deg);
+	}
+}
+
+.gl_state1 {
+	width: calc(100% - 172px);
+	height: 220px;
+	position: relative;
+	float: right;
+	overflow: auto;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gl_state1>h3 {
+	font-size: 20px;
+	margin: 7px;
+	height: 40px;
+	display: block;
+	background-image: url(page/button.png);
+	background-size: 100% 100%;
+	border-radius: 25px;
+	padding: 3px;
+}
+
+.gl_state1>h3::before {
+	content: '';
+	display: inline-block;
+	background-color: rgb(145, 145, 145);
+	border: #000000 solid 2px;
+	border-radius: 10px;
+	width: 10px;
+	height: 10px;
+}
+
+.gl_state1>.gl_select::before {
+	background-color: rgb(0, 255, 0);
+}
+
+.gl_state2 {
+	border-radius: 10px;
+	width: 100%;
+	overflow: auto;
+	height: calc(100% - 230px);
+	position: unset;
+	float: right;
+	font-size: 20px;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gl_page1>.gl_content {
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: unset;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gl_page1 .dialog {
+	margin: 0;
+	box-sizing: unset;
+}
+
+.gl_recall>div {
+	width: 95%;
+	position: unset;
+	height: 60px;
+	line-height: 60px;
+	color: #ffff7f;
+	background-image: url(page/select.png);
+	background-size: 100% 100%;
+	font-size: 40px;
+}
+
+.gl_dialog {
+	width: 100% !important;
+	height: 100% !important;
+	left: 0 !important;
+	top: 0 !important;
+}
+
+#gl_skills {
+	width: calc(100% - 10px);
+	height: calc(100% - 120px);
+	text-align: center;
+	position: relative;
+	overflow: auto;
+}
+
+#gl_skills>div {
+	background-image: url(page/tag.png);
+	background-size: 100% 100%;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 45%;
+	height: 150px;
+	margin: 5px;
+	position: unset;
+}
+
+#gl_skills>div>div {
+	text-align: center;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	position: unset;
+	font-size: 20px;
+}
+
+#gl_skills>.gl_select {
+	background-image: url(page/tag2.png);
+}
+
+@keyframes glow {
+	from {
+		box-shadow: 0px 0px 5px #ff00ff;
+	}
+
+	to {
+		box-shadow: 0px 0px 20px #ff00ff;
+	}
+}
+
+.gl_nature>div {
+	position: unset;
+	border: #b46f26 solid 5px;
+	width: 100%;
+	background-color: rgba(67, 38, 17, 1.0);
+	height: 60px;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+
+.gl_nature .gl_minus {
+	position: static;
+	height: 20px;
+	width: 20px;
+	background-image: url(page/minus.png);
+	background-size: 100% 100%;
+}
+
+.gl_nature .gl_minus:active {
+	transform: scale(0.7);
+}
+
+.gl_nature .gl_add {
+	position: static;
+	height: 20px;
+	width: 20px;
+	background-image: url(page/add.png);
+	background-size: 100% 100%;
+}
+
+.gl_nature .gl_add:active {
+	transform: scale(0.7);
+}
+
+.gl_nature .gl_shell {
+	position: relative;
+	height: 12px;
+	top: -5px;
+	border: #000000 solid 1px;
+	width: calc(100% - 60px);
+	border-radius: 10px;
+	background-color: #acacac;
+}
+
+.gl_nature .gl_shell>div {
+	position: unset;
+	float: left;
+	display: inline-block;
+}
+
+.gl_nature .gl_shell>span {
+	font-size: 10px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+}
+
+#gl_power {
+	height: 10px;
+	border-radius: 10px;
+	background-color: #ff0000;
+}
+
+#gl_defense {
+	height: 10px;
+	border-radius: 10px;
+	background-color: #ffaa00;
+}
+
+#gl_recover {
+	height: 10px;
+	border-radius: 10px;
+	background-color: #00ff00;
+}
+
+#gl_magic {
+	height: 10px;
+	border-radius: 10px;
+	background-color: #ff00ff;
+}
+
+#gl_content>div:not(.character) {
+	position: unset;
+	width: 100%;
+	border: #b46f26 solid 5px;
+	background-color: rgba(67, 38, 17, 1.0);
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#gl_content>div>div {
+	position: relative;
+}
+
+.gl_cover {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.gl_luckying {
+	position: relative;
+	border-radius: 5px;
+	width: 200px;
+	height: 300px;
+	left: calc(50% - 100px);
+	top: calc(50% - 150px);
+}
+
+.gl_luckying>canvas {
+	position: absolute;
+	left: -5px;
+	top: -5px;
+}
+
+.gl_luckying::before {
+	content: '';
+	position: relative;
+	background-image: url(biankuang.png);
+	display: inline-block;
+	width: calc(100% + 10px);
+	top: -5px;
+	left: -5px;
+	height: calc(100% + 10px);
+	background-size: 100% 100%;
+}
+
+.gl_luckying>.gl_title {
+	display: inline-block;
+	position: absolute;
+	width: calc(100% + 10px);
+	line-height: 45px;
+	text-align: center;
+	font-family: 'xinwei';
+	height: 60px;
+	bottom: -10px;
+	left: -5px;
+	background-image: url(page/button.png);
+	background-size: 100% 100%;
+	font-size: 25px;
+}
+
+.gl_lucky {
+	width: 560px;
+	height: 340px;
+	left: calc(50% - 280px);
+	overflow: auto;
+	text-align: center;
+	top: calc(50% - 170px);
+}
+
+.gl_lucky>div {
+	margin: 5px;
+	width: 100px;
+	height: 150px;
+	background-size: 100% 100%;
+	transition: all 0s;
+	position: relative;
+}
+
+.gl_lucky>div>.gl_title {
+	display: inline-block;
+	position: absolute;
+	width: calc(100% + 10px);
+	line-height: 20px;
+	text-align: center;
+	font-family: 'xinwei';
+	height: 30px;
+	bottom: -5px;
+	left: -5px;
+	background-image: url(page/button.png);
+	background-size: 100% 100%;
+	font-size: 15px;
+}
+
+.gl_lucky>div::before {
+	content: '';
+	position: relative;
+	background-image: url(biankuang.png);
+	display: inline-block;
+	width: calc(100% + 10px);
+	top: -5px;
+	left: -5px;
+	height: calc(100% + 10px);
+	background-size: 100% 100%;
+}
+
+@keyframes fazhen {
+	0% {
+		transform: rotateZ(0deg);
+		opacity: 0.5;
+	}
+
+	50% {
+		transform: rotateZ(180deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: rotateZ(360deg);
+		opacity: 0.5;
+	}
+}
+
+.gl_fazhen {
+	left: calc(50% - 250px);
+	top: calc(50% - 250px);
+	width: 500px;
+	height: 500px;
+	background-size: 100% 100%;
+	background-image: url(page/fazhen.png);
+	animation: 1s fazhen infinite linear;
+}
+
+.gl_luckyText {
+	left: calc(50% - 250px);
+	top: calc(50% + 180px);
+	width: 500px;
+	z-index: 2;
+	color: #ffaa00;
+	text-align: center;
+	font-family: "楷体";
+	font-size: 30px;
+	text-shadow: 0 0 5px rgb(255, 100, 100), 0 0 10px rgb(255, 50, 50), 0 0 15px rgb(255, 50, 50);
+}
+
+.gl_ban {
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	opacity: 0.8;
+}
+
+.gl_gouzhu {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-color: #000000;
+	z-index: -1;
+}
+
+.gl_xvanwo {
+	top: calc(50% - 174px);
+	left: calc(50% - 174px);
+	width: 348px;
+	height: 348px;
+	background-image: url(image/gouzhu.png);
+	background-size: cover;
+}
+
+
+@keyframes dong {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 100% 0;
+	}
+}
+
+.gl_broadcast {
+	width: 640px;
+	text-align: center;
+	left: calc(50% - 320px);
+	transition-timing-function: linear;
+	top: calc(100% + 100px);
+}
+
+.gl_broadcast>div {
+	position: static;
+	margin-bottom: 10px;
+	text-shadow: 0 0 5px rgb(255, 85, 0), 0 0 5px rgb(255, 85, 0), 0 0 5px rgb(255, 85, 0);
+	font-size: 35px;
+	font-family: xinwei;
+}
+
+.fengong_dialog .buttons {
+	min-height: 20px !important;
+}
+
+.fengong_dialog .button {
+	position: unset;
+	background-color: rgba(0, 0, 255, 0.3);
+	width: calc(100% - 20px);
+	margin: 3px 0;
+}
+
+.gl_achievement {
+	text-align: center;
+}
+
+.gl_achievement>div {
+	width: 70px;
+	height: 70px;
+	margin: 5px 50px;
+	position: relative;
+	background-size: cover;
+	border-radius: 65px;
+}
+
+.gl_achievement>div>div {
+	top: 25px;
+	left: -25px;
+	width: calc(100% + 50px);
+	text-align: center;
+	font-size: 15px;
+}
+
+.gl_achievement>div::before {
+	content: '';
+	display: inline-block;
+	position: relative;
+	left: -40px;
+	top: -20px;
+	width: 150px;
+	height: 100px;
+	background-image: url(page/achievement.png);
+	background-size: 100% 100%;
+}
+
+.gl_bag>div {
+	width: 70px;
+	height: 70px;
+	margin: 20px 10px 0 10px;
+	position: relative;
+	background-size: cover;
+	background-color: #000000;
+}
+
+.gl_bag>div>div {
+	bottom: -20px;
+	left: -5px;
+	width: calc(100% + 10px);
+	text-align: center;
+	font-size: 15px;
+}
+
+.gl_bag>div::before {
+	content: '';
+	display: inline-block;
+	position: relative;
+	left: -5px;
+	top: -17px;
+	width: 80px;
+	height: 106px;
+	background-image: url(page/items.png);
+	background-size: 100% 100%;
+}
